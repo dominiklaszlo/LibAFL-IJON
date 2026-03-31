@@ -1,5 +1,5 @@
-//! The maze can be generated with the [`script`](./maze_gen.py)
-//! By default I use a 100x100 maze to show the power of the fuzzer
+//! The maze can be generated with [`maze_gen.py`](../maze_gen.py)
+//! By default I use a 31x31 maze, but have fun with the 100x100 too
 
 use libafl_ijon::ijon_set;
 
