@@ -1,0 +1,10 @@
+[package]
+name = "libafl_ijon"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# libafl_bolts = { path = "../../LibAFL/crates/libafl_bolts/", default-features = false, features = ["alloc", "xxh3"] }
+xxhash-rust = { version = "0.8.5", features = ["const_xxh3"] }
+
+libafl_bolts = { version = "0.15.4", default-features = false, features = ["alloc", "xxh3"] }

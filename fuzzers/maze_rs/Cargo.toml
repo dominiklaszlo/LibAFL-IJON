@@ -1,0 +1,25 @@
+[package]
+name = "maze_rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# libafl = { path = "../../../LibAFL/crates/libafl/", features = ["tui_monitor"] }
+# libafl_bolts = { path = "../../../LibAFL/crates/libafl_bolts/", features = ["xxh3"] }
+libafl_ijon = { path = "../../libafl_ijon/" }
+
+libafl = { version = "0.15.4", features = ["tui_monitor"] }
+libafl_bolts = { version = "0.15.4", features = ["xxh3"] }
+
+[features]
+tui = []
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+opt-level = 3
+# debug = true
+lto = true
+panic = "abort"
+codegen-units = 1
